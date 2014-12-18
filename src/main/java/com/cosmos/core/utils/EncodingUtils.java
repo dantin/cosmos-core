@@ -3,7 +3,7 @@ package com.cosmos.core.utils;
 import org.apache.commons.codec.binary.Base64;
 
 /**
- * 编解码工具类
+ * 编解码工具基类
  *
  * @author David
  */
