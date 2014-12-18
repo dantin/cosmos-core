@@ -11,28 +11,28 @@ import java.io.UnsupportedEncodingException;
  */
 public abstract class StringUtils {
 
-    public static final String DEFAULT_CHARSET = "utf-8";
+    public static final String UTF_8 = "utf-8";
 
     /**
      * 用UTF-8编码将字符串转成字节数组
      *
-     * @param s 字符串
+     * @param string 字符串
      * @return 字节数组
      */
-    public static byte[] toByte(String s) {
-        return toByte(s, DEFAULT_CHARSET);
+    public static byte[] toBytes(String string) {
+        return toBytes(string, UTF_8);
     }
 
     /**
      * 用特定编码将字符串转成字节数组
      *
-     * @param s       字符串
+     * @param string  字符串
      * @param charset 编码方式
      * @return 字节数组
      */
-    public static byte[] toByte(String s, String charset) {
+    public static byte[] toBytes(String string, String charset) {
         try {
-            return s.getBytes(charset);
+            return string.getBytes(charset);
         } catch (UnsupportedEncodingException e) {
             throw new BusinessException(e);
         }
@@ -45,7 +45,7 @@ public abstract class StringUtils {
      * @return 字符串
      */
     public static String toString(byte[] bytes) {
-        return toString(bytes, DEFAULT_CHARSET);
+        return toString(bytes, UTF_8);
     }
 
     /**

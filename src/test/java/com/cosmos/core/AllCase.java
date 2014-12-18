@@ -2,6 +2,7 @@ package com.cosmos.core;
 
 import com.cosmos.core.utils.ClassUtilsTest;
 import com.cosmos.core.utils.CommonUtilsTest;
+import com.cosmos.core.utils.EncodingUtilsTest;
 import junit.extensions.ActiveTestSuite;
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -18,6 +19,7 @@ public class AllCase {
 
         suite.addTestSuite(CommonUtilsTest.class);
         suite.addTestSuite(ClassUtilsTest.class);
+        suite.addTestSuite(EncodingUtilsTest.class);
 
         return suite;
     }
