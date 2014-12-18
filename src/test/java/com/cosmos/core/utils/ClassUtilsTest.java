@@ -2,7 +2,6 @@ package com.cosmos.core.utils;
 
 import com.cosmos.core.exception.BusinessException;
 import junit.framework.TestCase;
-import org.junit.Assert;
 
 import java.io.IOException;
 import java.util.List;
@@ -16,30 +15,19 @@ public class ClassUtilsTest extends TestCase {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Assert.assertNotNull(classes);
-        Assert.assertEquals(0, classes.size());
-
-        System.out.println();
-        System.out.println("List sub-class of " + BusinessException.class.getName());
-        for (Class<? extends BusinessException> clazz : classes) {
-            System.out.println(clazz.getName());
-        }
+        assertNotNull(classes);
+        assertEquals(0, classes.size());
     }
 
     public void testGetAllClass() {
         List<Class<?>> classes = null;
         try {
-            classes = ClassUtils.getAllClass("com.cosmos.server");
+            classes = ClassUtils.getAllClass("com.cosmos.core.exception");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Assert.assertNotNull(classes);
-        Assert.assertEquals(0, classes.size());
 
-        System.out.println();
-        System.out.println("List all classes under com.cosmos.server");
-        for (Class<?> clazz : classes) {
-            System.out.println(clazz.getName());
-        }
+        assertNotNull(classes);
+        assertEquals(3, classes.size());
     }
 }

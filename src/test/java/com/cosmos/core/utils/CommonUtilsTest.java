@@ -32,34 +32,16 @@ public class CommonUtilsTest extends TestCase {
     public void testDeduplicate() {
         List<String> deduplicatedStrings = CommonUtils.deduplicate(strings);
 
-        Assert.assertEquals(strings.size() - 1, deduplicatedStrings.size());
-
-        System.out.println();
-        System.out.println("Test Deduplicate String list");
-        System.out.println("original list:     " + strings);
-        System.out.println("after deduplicate: " + deduplicatedStrings);
+        assertEquals(strings.size() - 1, deduplicatedStrings.size());
 
         List<Class<?>> deduplicatedClasses = CommonUtils.deduplicate(classes);
 
-        Assert.assertEquals(classes.size() - 1, deduplicatedClasses.size());
-
-        System.out.println();
-        System.out.println("Test Deduplicate Class list");
-        System.out.println("original list:     " + classes);
-        System.out.println("after deduplicate: " + deduplicatedClasses);
+        assertEquals(classes.size() - 1, deduplicatedClasses.size());
     }
 
     public void testDeduplicatedMerge() {
         List<Integer> mergedIntegerList = CommonUtils.deduplicatedMerge(iList1, iList2);
 
         Assert.assertEquals(iList1.size() + iList2.size() - 3, mergedIntegerList.size());
-
-        System.out.println();
-        System.out.println("Test Deduplicated Merge int list");
-        System.out.println("original");
-        System.out.println("list1:  " + iList1);
-        System.out.println("list2:  " + iList2);
-        System.out.println("after deduplicated merge int list");
-        System.out.println("result: " + mergedIntegerList);
     }
 }
