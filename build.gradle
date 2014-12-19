@@ -56,6 +56,10 @@ dependencies {
 
     // dependency with compile scope
     compile(
+            // http client
+            'org.apache.httpcomponents:httpclient:4.2',
+            'org.apache.httpcomponents:httpcore:4.2.1',
+            'org.apache.httpcomponents:httpmime:4.2',
             // commons dependency
             'commons-lang:commons-lang:2.5',
             'commons-codec:commons-codec:1.5',
