@@ -1,7 +1,6 @@
 package com.cosmos.core.utils;
 
 import junit.framework.TestCase;
-import org.junit.Assert;
 
 import java.util.Arrays;
 import java.util.List;
@@ -42,6 +41,6 @@ public class CommonUtilsTest extends TestCase {
     public void testDeduplicatedMerge() {
         List<Integer> mergedIntegerList = CommonUtils.deduplicatedMerge(iList1, iList2);
 
-        Assert.assertEquals(iList1.size() + iList2.size() - 3, mergedIntegerList.size());
+        assertEquals(iList1.size() + iList2.size() - 3, mergedIntegerList.size());
     }
 }
